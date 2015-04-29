@@ -8,7 +8,8 @@ var triangle = {
     isIsosceles : function(a,b,c) {
    	    if((a!=b)&&(a!=c)&&(b!=c)) return false ;
     	if((a<=0)||(b<=0)||(c<=0)) return false ;
-    	    return true ;
+  	    if((a+b<=c)||(b+c<=a)||(a+c<=b)) return false ;   
+   	    return true ;
     },
 
     isScalene: function(a,b,c) {
